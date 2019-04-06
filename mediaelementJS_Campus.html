@@ -1,0 +1,26 @@
+<html>
+<head><script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement.min.js"></script>
+</head>
+<body>
+<!-- https://github.com/mediaelement/mediaelement/blob/master/docs/usage.md -->
+<video src="https://res.cloudinary.com/dougsillars/video/upload/sp_hd/v1543082006/Campus_mfkz6z.m3u8" width="1000" autoplay muted loop
+		class="mejs__player">
+</video>
+
+<script>
+	// You can use either a string for the player ID (i.e., `player`), 
+	// or `document.querySelector()` for any selector
+	var player = new MediaElementPlayer('player', {
+		pluginPath: "/path/to/shims/",
+	// When using `MediaElementPlayer`, an `instance` argument
+	// is available in the `success` callback
+		success: function(mediaElement, originalNode, instance) {
+			// do things
+		}
+	});
+</script>
+
+
+
+</body>
+</html>
