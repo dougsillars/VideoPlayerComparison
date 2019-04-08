@@ -10,7 +10,7 @@
 <video
 		crossorigin
 		width="1000" controls autoplay muted loop
-		class="mejs__player">
+		class="videoplayer">
 		<source src="https://res.cloudinary.com/dougsillars/video/upload/sp_hd/v1543082006/Campus_mfkz6z.m3u8" type="application/x-mpegURL">
 </video>
 
@@ -20,12 +20,12 @@
 	// You can use either a string for the player ID (i.e., `player`), 
 	// or `document.querySelector()` for any selector
 	console.log("script");
-	var player = new MediaElementPlayer('mejs__player', {
+	var player = new MediaElementPlayer('videoplayer', {
 		pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
 	// When using `MediaElementPlayer`, an `instance` argument
 	// is available in the `success` callback
 	
-		success: function(mediaElement, originalNode, instance) {
+		success: function(mediaElement, originalNode) {
 			// do things
 		
 			
