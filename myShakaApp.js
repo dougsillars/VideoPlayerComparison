@@ -1,17 +1,7 @@
-<html>
-<head>
+// myapp.js
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.4.7/shaka-player.compiled.debug.js"></script>
-</head>
-<body>
-
-
-
-<script>
-	var manifestUri =
-    'https://res.cloudinary.com/dougsillars/video/upload/v1543082006/Campus_mfkz6z.mp4';
-    
-    shaka.log.setLevel(shaka.log.Level.DEBUG);
+var manifestUri =
+    'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
 
 function initApp() {
   // Install built-in polyfills to patch browser incompatibilities.
@@ -33,9 +23,8 @@ function initPlayer() {
   var player = new shaka.Player(video);
 
   // Attach player to the window to make it easy to access in the JS console.
-  //window.player = player;
-  player.attach(video);
-  player.load(manifestUri);
+  window.player = player;
+
   // Listen for error events.
   player.addEventListener('error', onErrorEvent);
 
@@ -58,18 +47,3 @@ function onError(error) {
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
-</script>
-
-<video crossorigin 
-		width="1000" 
-		id="video"
-		controls
-		autoplay
-		muted
-		loop
-		>
-</video>
-
-
-</body>
-</html>
