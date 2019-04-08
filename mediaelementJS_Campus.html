@@ -2,8 +2,7 @@
 <head>
 
 <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelement-and-player.min.js"></script>
-<!-- MUX is required for playback of HLS-->
-<script defer src="mux.js"></script>
+
 <!-- library -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 </head>
@@ -26,7 +25,7 @@
 <script>
 	// You can use either a string for the player ID (i.e., `player`), 
 	// or `document.querySelector()` for any selector
-	var player = new MediaElementPlayer('player', {
+	var player = new MediaElementPlayer('mejs__player', {
 		pluginPath: "https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/",
 	// When using `MediaElementPlayer`, an `instance` argument
 	// is available in the `success` callback
