@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="../js/video.min.js"></script>
+
+<link href="../js/video-js.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <video-js id="my_video_1" class="vjs-default-skin" 
+  controls preload="auto" 
+  autoplay 
+  muted
+   loop
+    playsinline
+     width="360"
+     {
+  responsive: true
+	}); >
+    <source src="https://res.cloudinary.com/dougsillars/video/upload/sp_full_hd/v1543082006/Campus_mfkz6z.m3u8" type="application/x-mpegURL">
+  </video-js>
+  
+
+  <script>
+    var player = videojs('my_video_1');
+  </script>
+
+</body>
+
+</html>
